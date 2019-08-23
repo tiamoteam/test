@@ -1,0 +1,23 @@
+server:
+  port: 8086
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/newer?useSSL=false&serverTimezone=Asia/Shanghai
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/logs
+  redis:
+    jedis:
+      pool:
+        max-active: 8
+        min-idle: 0
+        max-idle: 8
+
+
+mybatis:
+  type-aliases-package: com.newer.spring.domain
+logging:
+  level:
+    com.newer.spring.mapper: debug #输出该包下debug级别以上的日志
